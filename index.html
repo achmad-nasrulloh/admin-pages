@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Produk Baru</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="brand-container">
+                <div class="brand-title">BATIKAN</div>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <a href="#" class="menu-item">
+                    <i data-lucide="layout-dashboard" class="menu-icon"></i> Dashboard
+                </a>
+                <a href="#" class="menu-item">
+                    <i data-lucide="shopping-cart" class="menu-icon"></i> Pesanan
+                </a>
+                <a href="#" class="menu-item active">
+                    <i data-lucide="package" class="menu-icon"></i> Produk
+                </a>
+                <a href="#" class="menu-item">
+                    <i data-lucide="users" class="menu-icon"></i> Pengguna
+                </a>
+                <a href="#" class="menu-item">
+                    <i data-lucide="bar-chart-2" class="menu-icon"></i> Laporan
+                </a>
+                <a href="#" class="menu-item">
+                    <i data-lucide="bell" class="menu-icon"></i> Notifikasi
+                </a>
+                <a href="#" class="menu-item settings">
+                    <i data-lucide="settings" class="menu-icon"></i> Pengaturan
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-panel">
+            <header class="top-header">
+                <div class="header-titles">
+                    <div class="breadcrumb">
+                        <span class="text-muted">Produk / </span>
+                        <span class="text-primary">Tambah Produk</span>
+                    </div>
+                    <h1 class="page-title">Tambah Produk Baru</h1>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="profile-container" id="profile-trigger">
+                        <div class="user-avatar">AD</div>
+                        <span class="user-email">admin@batikan.id</span>
+                        <i data-lucide="chevron-down" class="icon-small text-muted"></i>
+                        
+                        <div class="dropdown-menu" id="profile-dropdown">
+                            <a href="#" class="dropdown-item text-danger">
+                                <i data-lucide="log-out" class="menu-icon"></i> Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <section class="form-column">
+                    <div class="panel-card">
+                        <h2 class="panel-title">
+                            <i data-lucide="info" class="title-icon"></i> Informasi Produk
+                        </h2>
+                        
+                        <div class="input-group">
+                            <label>Nama Produk <span class="required">*</span></label>
+                            <input type="text" id="product-name" placeholder="Masukkan nama batik...">
+                        </div>
+
+                        <div class="input-group">
+                            <label>Deskripsi <span class="required">*</span></label>
+                            <textarea id="product-desc" rows="4" placeholder="Deskripsikan produk batik Anda..."></textarea>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Harga (Rp) <span class="required">*</span></label>
+                                <input type="number" id="product-price" placeholder="0">
+                            </div>
+                            <div class="input-group">
+                                <label>Stok <span class="required">*</span></label>
+                                <input type="number" id="product-stock" placeholder="0">
+                            </div>
+                        </div>
+
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Berat (gram) <span class="required">*</span></label>
+                                <input type="number" placeholder="0">
+                            </div>
+                            <div class="input-group">
+                                <label>Kategori <span class="required">*</span></label>
+                                <select class="select-input">
+                                    <option>Pilih kategori...</option>
+                                    <option>Batik Tulis</option>
+                                    <option>Batik Cap</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-card">
+                        <h2 class="panel-title">
+                            <i data-lucide="image" class="title-icon"></i> Gambar Produk
+                        </h2>
+                        <div class="upload-container">
+                            <div class="upload-dropzone">
+                                <i data-lucide="upload-cloud" class="upload-icon"></i>
+                                <p>Drag & drop gambar di sini</p>
+                                <p class="text-muted small-text">atau</p>
+                                <input type="file" id="image-input" accept="image/png, image/jpeg, image/webp" hidden>
+                                <label for="image-input" class="btn btn-outline">Pilih File</label>
+                                <p class="upload-requirements">PNG, JPG, WEBP max 5MB</p>
+                            </div>
+                            <div class="thumbnail-list">
+                                <div class="thumbnail-item empty">
+                                    <i data-lucide="image" class="text-muted"></i>
+                                </div>
+                                <div class="thumbnail-item empty">
+                                    <i data-lucide="image" class="text-muted"></i>
+                                </div>
+                                <div class="thumbnail-item add-more">
+                                    <i data-lucide="plus"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group" style="margin-top: 24px;">
+                            <label>SKU / Kode Produk</label>
+                            <input type="text" placeholder="BTK-0001 (auto-generate)">
+                        </div>
+
+                        <div class="form-actions">
+                            <button class="btn btn-dark">Simpan Draft</button>
+                            <button class="btn btn-primary"><i data-lucide="plus" class="btn-icon"></i> Tambah Produk</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="sidebar-column">
+                    <div class="panel-card">
+                        <h2 class="panel-title">
+                            <i data-lucide="eye" class="title-icon"></i> Pratinjau
+                        </h2>
+                        <div class="preview-container">
+                            <div class="preview-image-box" id="preview-display">
+                                <div class="preview-placeholder">
+                                    <i data-lucide="image" class="placeholder-icon"></i>
+                                    <span>Gambar Produk</span>
+                                </div>
+                            </div>
+                            <div class="preview-content">
+                                <div id="preview-title" class="preview-text skeleton-long"></div>
+                                <div id="preview-desc" class="preview-text skeleton-short"></div>
+                                <div class="preview-footer">
+                                    <span class="preview-price" id="preview-price-text">Rp 0</span>
+                                    <span class="preview-stock text-muted" id="preview-stock-text">Stok: 0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-card">
+                        <h2 class="panel-title">
+                            <i data-lucide="globe" class="title-icon"></i> Publikasi
+                        </h2>
+                        
+                        <div class="publish-row">
+                            <span>Status</span>
+                            <select class="select-input status-select">
+                                <option value="active">Active</option>
+                                <option value="disable">Disable</option>
+                            </select>
+                        </div>
+                        
+                        <div class="publish-row">
+                            <span>Tampilkan di Beranda</span>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="publish-row">
+                            <span>Produk Unggulan</span>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="panel-card">
+                        <h2 class="panel-title">
+                            <i data-lucide="trending-up" class="title-icon"></i> Statistik
+                        </h2>
+                        <div class="stats-row">
+                            <span class="text-muted">Total Terjual</span>
+                            <span class="stats-value">0</span>
+                        </div>
+                        <div class="stats-row">
+                            <span class="text-muted">Rating</span>
+                            <span class="stats-value">—</span>
+                        </div>
+                        <div class="stats-row">
+                            <span class="text-muted">Ditambah pada</span>
+                            <span class="stats-value">Hari ini</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
