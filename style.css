@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #000000; /* Darker outer background to center the 1920px container */
+    background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -16,8 +16,8 @@ body {
 }
 
 .dashboard-layout {
-    width: 1920px; /* Fixed width for HTML to Design import */
-    min-height: 1080px; /* Fixed minimum height */
+    width: 1920px;
+    min-height: 1080px;
     background-color: #1e2128;
     display: flex;
     box-shadow: 0 0 20px rgba(0,0,0,0.5);
@@ -25,7 +25,7 @@ body {
 
 /* Sidebar and Navigation */
 .sidebar {
-    width: 300px; /* Scaled up for 1920px width */
+    width: 300px;
     background-color: #242730;
     display: flex;
     flex-direction: column;
@@ -192,9 +192,9 @@ body {
 /* Content Grid Layout */
 .content-wrapper {
     display: grid;
-    grid-template-columns: 1fr 400px; /* Wider right panel for 1920px screen */
-    gap: 40px; /* Increased gap */
-    padding: 48px; /* Increased padding */
+    grid-template-columns: 1fr 400px;
+    gap: 40px;
+    padding: 48px;
 }
 
 .panel-card {
@@ -204,7 +204,6 @@ body {
     margin-bottom: 32px;
 }
 
-/* Fixed Panel Title styles with Icons */
 .panel-title {
     font-size: 18px;
     font-weight: 600;
@@ -379,7 +378,7 @@ textarea:focus {
 }
 
 .preview-image-box {
-    height: 260px; /* Scaled up */
+    height: 260px;
     background-color: #2a2e39;
     display: flex;
     align-items: center;
