@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Initialize Lucide Icons
+    // Inisialisasi Ikon Lucide
     lucide.createIcons();
     
-    // File Upload Preview
+    // Pratinjau Unggah Gambar
     const fileInput = document.getElementById('image-input');
     const previewContainer = document.getElementById('preview-display');
     const placeholderText = previewContainer.querySelector('.preview-placeholder');
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Live Text Preview elements
+    // Elemen Pratinjau Langsung (Live Preview)
     const inputName = document.getElementById('product-name');
     const inputDesc = document.getElementById('product-desc');
     const inputPrice = document.getElementById('product-price');
@@ -71,13 +71,13 @@ document.addEventListener('DOMContentLoaded', () => {
     inputStock.addEventListener('input', (e) => {
         const value = e.target.value;
         if (value !== '') {
-            previewStockText.textContent = `Stock: ${value}`;
+            previewStockText.textContent = `Stok: ${value}`;
         } else {
-            previewStockText.textContent = 'Stock: 0';
+            previewStockText.textContent = 'Stok: 0';
         }
     });
 
-    // Profile Dropdown Toggle Logic
+    // Logika Menu Dropdown Profil
     const profileTrigger = document.getElementById('profile-trigger');
     const profileDropdown = document.getElementById('profile-dropdown');
 
